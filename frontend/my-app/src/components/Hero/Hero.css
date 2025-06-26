@@ -1,0 +1,160 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: linear-gradient(to right, #fde1ff, #fdc177e9 60%);
+  padding: 60px 24px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* Lado izquierdo */
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 60px;
+  line-height: 1.2;
+}
+
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-left .hand-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hand-hand-icon p {
+  color: #171717;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hand-hand-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.hero-left p {
+  color: #171717;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Botón */
+.hero-latest-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+  padding: 20px 40px;
+  border-radius: 75px;
+  background: #ff4141;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+  background: #e13a3a;
+}
+
+.hero-latest-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Lado derecho */
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-left {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .hero-left p,
+  .hand-hand-icon p {
+    font-size: 48px;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .hero-latest-btn {
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+
+  .hero-right img {
+    max-width: 350px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .hero {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .hero-left p,
+  .hand-hand-icon p {
+    font-size: 36px;
+  }
+
+  .hand-hand-icon img {
+    width: 60px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-latest-btn {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+
+  .hero-right img {
+    max-width: 250px;
+  }
+}

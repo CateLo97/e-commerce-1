@@ -1,0 +1,133 @@
+/* Contenedor principal */
+.offers {
+  width: 100%;
+  background: linear-gradient(to right, #fde1ff, #fdc177e9 60%);
+  margin-bottom: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+
+.offers-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60vh;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+/* Texto y botón (lado izquierdo) */
+.offers-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.offers-left h1 {
+  color: #171717;
+  font-size: 60px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.offers-left p {
+  color: #171717;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 16px 0 0;
+}
+
+.offers-button {
+  margin-top: 30px;
+  padding: 20px 40px;
+  border-radius: 35px;
+  background-color: #ff4141;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.offers-button:hover {
+  background-color: #e13a3a;
+}
+
+/* Imagen (lado derecho) */
+.offers-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.offers-right img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 90%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .offers-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+    gap: 30px;
+  }
+
+  .offers-left h1 {
+    font-size: 48px;
+  }
+
+  .offers-left p {
+    font-size: 20px;
+  }
+
+  .offers-button {
+    padding: 18px 36px;
+    font-size: 20px;
+  }
+
+  .offers-right img {
+    max-width: 300px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .offers {
+    padding: 0 16px;
+  }
+
+  .offers-left h1 {
+    font-size: 36px;
+  }
+
+  .offers-left p {
+    font-size: 18px;
+  }
+
+  .offers-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .offers-right img {
+    max-width: 250px;
+  }
+}

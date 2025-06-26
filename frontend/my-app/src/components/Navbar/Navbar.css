@@ -18,6 +18,11 @@
     gap: 10px;
 }
 
+.nav-logo img{
+    width: 60px;
+    height: 60px;
+}
+
 .nav-logo p{
     color: #171717;
     font-size: 38px;
@@ -55,6 +60,12 @@
     display: flex;
     align-items: center;
     gap: 45px;
+}
+
+.nav-login-cart img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
 }
 
 .nav-login-cart button{
