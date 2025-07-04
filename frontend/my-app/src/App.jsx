@@ -7,11 +7,10 @@ import Cart from './page/Cart';
 import LoginSignup from './page/LoginSignup';
 import Footer from './components/Footer/Footer';
 
-/** arreglar **/
-import men_banner from './components/Assets/banner_mens.png'
-import women_banner from './components/Assets/banner_women.png'
-import kid_banner from './components/Assets/banner_kids.png'
 
+import men_banner from './components/Assets/banner_mens.png';
+import women_banner from './components/Assets/banner_women.png';
+import kid_banner from './components/Assets/banner_kids.png';
 
 function App() {
   return (
@@ -34,6 +33,3 @@ function App() {
 }
 
 export default App;
-{
-  
-}

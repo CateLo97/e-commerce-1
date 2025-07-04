@@ -1,8 +1,9 @@
 
 import React from "react";
 import './Hero.css';
+import { SlArrowRight } from "react-icons/sl";
 import hand_icon from '../Assets/hand_icon.png';
-import arrow_icon from '../Assets/arrow_icon.png';
+
 import hero_image from '../Assets/hero_image.jpg'; 
 
 const Hero = () => {
@@ -20,7 +21,7 @@ const Hero = () => {
         </div>
         <div className="hero-latest-btn">
           <div>Latest Collection</div>
-          <img src={arrow_icon} alt="Arrow Icon" />
+          <SlArrowRight fontSize={24} />
         </div>
       </div>
       <div className="hero-right">

@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +9,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 16px 32px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  background: white;
-  position: relative;
-  z-index: 100;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
 }
 
 /* LOGO */
@@ -31,7 +27,7 @@
 
 .nav-logo p {
   color: #171717;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 600;
 }
 
@@ -40,50 +36,40 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 40px;
+  gap: 50px;
   color: #626262;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
 }
 
-.list-link {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-
-.list-item {
+.nav-menu li {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 8px 16px;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.list-link:hover .list-item,
-.list-item:hover {
+.nav-menu li:hover {
   background-color: #ff4141;
   color: white;
+  border-radius: 8px;
 }
 
-.nav-menu-hr {
-  width: 100%;
-  height: 2px;
+.nav-menu hr {
   border: none;
-  background-color: #ff4141;
-  margin: 0;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #ff4141;
 }
 
 /* LOGIN CART */
 .nav-login-cart {
   display: flex;
   align-items: center;
-  gap: 20px;
-  position: relative;
+  gap: 45px;
 }
 
 .nav-login-cart img {
@@ -92,12 +78,27 @@
   cursor: pointer;
 }
 
+/*
+.nav-login-cart button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;/
+  border-radius: 75px;/
+  color: #515151;/
+  font-size: 20px;/
+  font-weight: 500;
+  cursor: pointer;/
+  padding: 5px 10px;/
+  transition: background 0.3s, transform 0.3s;/
+}*/
+
 .nav-login-cart button {
   border: 1px solid #7a7a7a;
   border-radius: 40px;
   color: #515151;
   padding: 8px 18px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
@@ -122,106 +123,76 @@
   margin-left: -55px;
   border-radius: 11px;
   font-size: 14px;
-  background: #ff4141;
+  background: red;
   color: white;
 }
 
-/* LOGIN BUTTON & LINK */
-.nav-login-link {
-  display: none; /* oculto por defecto (desktop) */
-}
-
-.nav-login-button{
-  display: block; /* visible por defecto (desktop) */
-}
-
-/* HAMBURGER */
+/* hamburguesa hidden by default */
 .nav-hamburger {
   display: none;
   cursor: pointer;
 }
-.nav-cart-link {
-  display: none;
-}
 
-/* RESPONSIVE TABLET 768–1024 */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .navbar {
-    padding: 16px 20px;
-  }
-  .nav-menu {
-    gap: 20px;
-    font-size: 16px;
-  }
-  .nav-login-cart button {
-    padding: 6px 14px;
-    font-size: 14px;
-  }
-  .nav-logo img {
-    width: 50px;
-    height: 50px;
-  }
-  .nav-logo p {
-    font-size: 28px;
-  }
-}
-
-/* RESPONSIVE MOBILE <768 */
+/* mobile styles */
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
     padding: 16px 20px;
   }
+
   .nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 65%;
+    width: 60%;
     height: 100vh;
     background: white;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 30px;
-    transition: right 0.3s ease;
-    z-index: 99;
+    transition: right 0.3s;
+    z-index: 10;
   }
+
   .nav-menu-active {
     right: 0;
   }
-  .list-item {
+
+  .nav-menu li {
     width: 100%;
     text-align: center;
     padding: 15px 0;
+    transition: background-color 0.3s, color 0.3s;
   }
-  .nav-menu-hr {
-    width: 50%;
+
+  .nav-menu li:hover {
+    background-color: #ff4141;
+    color: white;
   }
+
+  .nav-menu hr {
+    display: none;
+  }
+
   .nav-login-cart {
-    display: none; /* oculta la sección login-cart en mobile */
+    display: none;
   }
+
   .nav-hamburger {
     display: block;
-    font-size: 26px;
     color: #333;
-    z-index: 100;
+    z-index: 20;
   }
+
   .nav-logo img {
     width: 45px;
     height: 45px;
   }
+
   .nav-logo p {
     font-size: 24px;
   }
-  .nav-login-link {
-    display: block; /* login dentro del menú hamburguesa en mobile */
-  }
-
-  .nav-cart-link {
-    display: block;
-  }
-
-  .nav-login-button {
-    display: none; /* login botón desktop oculto en mobile */
-  }
 }
+
+/****/

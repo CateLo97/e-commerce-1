@@ -21,7 +21,7 @@ import Item from '../items/Item'
           })
         }
       </div>
-    </div>
+    </div> 
   )
 }
 

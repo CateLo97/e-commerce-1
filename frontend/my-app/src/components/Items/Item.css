@@ -1,5 +1,8 @@
 .item{
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
 .item p{
@@ -8,13 +11,25 @@
 
 .item img {
     width: 100%; 
-    max-width: 250px;
+    width: 200px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.item-prices{
+.list-item {
+  list-style: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.list-item:hover {
+  background-color: rgba(0,0,0,0.1); /* cambia al gusto */
+}
+
+
+.items-prices{
     display: flex;
     gap: 20px;
 }

@@ -73,11 +73,6 @@
   background: #e13a3a;
 }
 
-.hero-latest-btn img {
-  width: 30px;
-  height: 30px;
-}
-
 /* Lado derecho */
 .hero-right {
   flex: 1;
@@ -112,11 +107,14 @@
 
   .hero-left p,
   .hand-hand-icon p {
-    font-size: 48px;
+    font-size: 38px;
+    display: flex;
+    align-items: start;
+    line-height: 1.5;
   }
 
   .hero-left h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .hero-latest-btn {
